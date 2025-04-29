@@ -1,0 +1,96 @@
+site_name: DoIT Skills Orchestration System
+site_description: Documentation for the Human-Centric Skills Orchestration System
+site_author: DoIT
+copyright: Copyright &copy; 2025 DoIT
+
+# Repository
+repo_name: doit/skills-orchestration
+repo_url: https://github.com/doit/skills-orchestration
+
+# Theme configuration
+theme:
+  name: material
+  palette:
+    primary: blue
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      # Make sure to keep this for syntax highlighting
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+  - pymdownx.tabbed:
+      alternate_style: true
+
+# Plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: true
+
+# Page navigation
+nav:
+  - Home: 'index.md'
+  - System Overview: 'overview.md'
+  - Architecture: 'architecture.md'
+  - User Stories: 'user-stories.md'
+  - Design Decisions: 'decisions.md'
+  - Components:
+    - Data Collection: 'components/data-collection.md'
+    - Data Processing: 'components/data-processing.md'
+    - Presentation: 'components/presentation.md'
+  - Implementation:
+    - Data Models: 'implementation/data-models.md'
+    - API Specifications: 'implementation/api-specs.md'
+    - Integrations: 'implementation/integrations.md'
+  - Development:
+    - Getting Started: 'development/getting-started.md'
+    - Contributing: 'development/contributing.md'
+
+# Extra CSS for customization
+extra_css:
+  - 'assets/css/custom.css'
+
+# Extra JavaScript for enhanced functionality
+extra_javascript:
+  - 'assets/js/custom.js'
+  - 'https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js'
+
+# Additional configuration
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/doit
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/company/doit
